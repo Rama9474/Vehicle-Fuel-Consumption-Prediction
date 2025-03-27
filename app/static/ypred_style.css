@@ -1,0 +1,167 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styles */
+body {
+    background: url('hi.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensure the image covers the entire background */
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Container for Layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background to improve readability */
+    border-radius: 10px; /* Optional for rounded corners */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #0044cc; /* Classic Blue */
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 1.8em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .menu-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar .menu-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu-links li a:hover {
+    background-color: #005bb5;
+    transform: scale(1.1);
+}
+
+.navbar .material-symbols-outlined {
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Hero Section */
+.super {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.main {
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.sub h1 {
+    font-size: 2.5em;
+    color: #0044cc;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.input-field {
+    width: 48%;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input-field input:focus {
+    border-color: #0044cc;
+}
+
+/* Submit Button */
+.btn-field {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-field button {
+    background-color: #0044cc;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-field button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .navbar .menu-links {
+        display: none;
+    }
+
+    .navbar .material-symbols-outlined {
+        display: block;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-field {
+        width: 100%;
+    }
+}
+
+/* Mobile Menu Toggle (Hamburger) */
+#menu-btn:checked + .menu-links {
+    display: block;
+}

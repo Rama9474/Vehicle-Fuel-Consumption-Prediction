@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>result</title>
+<link rel="stylesheet" href="../static/result_style.css">
+</head>
+<body>
+<div class="mini">
+<header>
+<nav class="navbar">
+<a href="{{url_for('home')}}" class="logo">Result<span></span></a>
+<ul class="menu-links">
+<li><a href="{{url_for('home')}}">Home</a></li>
+<li><a href="{{url_for('y_predict')}}">Fuel predictor</a></li>
+<li><a href="{{url_for('about')}}">About us</a></li>
+<li><a href="{{url_for('contact')}}">Contact</a></li>
+</ul>
+</nav>
+</header>
+<div class="form-box">
+<div class = "result">
+<h2>{{prediction_text}}</h2>
+</div>
+</div>
+</div>
+</body>
+</html>

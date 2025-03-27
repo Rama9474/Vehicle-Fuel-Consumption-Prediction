@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us page</title>
+<link rel="stylesheet" href="../static/about_style.css">
+</head>
+<body>
+<section class="hero">
+<header>
+<nav class="navbar">
+<a href="{{url_for('home')}}" class="logo">About Us<span></span></a>
+<ul class="menu-links">
+<li><a href="{{url_for('home')}}">Home</a></li>
+<li><a href="{{url_for('y_predict')}}">Fuel predictor</a></li>
+<li><a href="{{url_for('about')}}">About us</a></li>
+<li><a href="{{url_for('contact')}}">Contact</a></li>
+</ul>
+</nav>
+</header>
+<div class="heading">
+<h1> About Us</h1>
+</div>
+<div class="container">
+<div class="hero-content">
+<h2>Our Service</h2>
+<p>We predict the fuel consumption .<br>
+of your vechile based on the trip you take<br>
+we use the machine learning model which calculate the fuel<br>
+based on the several parameters and provide accurate results</p>
+<button class="button"> Learn more</button>
+</div>
+<div class="hero-img">
+<img src="../static/fuelstats.jpg" alt="" width="500" height="400">
+</div>
+<div class="our-team">
+<h2>Our Team</h2>
+<p>Meet our team members who help you out<br>
+with the prediction of fuel consumption for your vechile
+</p>
+</div>
+<div class="team">
+<ul class="team-mem">
+<li>
+<b>Pothanaboina Kavya</b><br>
+<p>21JJ1A0551</p>
+<p>Kavyap79@gmail.com</p>
+</li>
+<li>
+<b>Komma Rama</b><br>
+<p>22JJ5A0502</p>
+<p>k.rama200494@gmail.com</p>
+</li>
+<li>
+<b>Mandala Akhila</b><br>
+<p>22JJ5A0506</p>
+<p>akhilamandala04@gmail.com</p>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<script>
+const header = document.querySelector("header");
+const menuBtn = document.querySelector("#menu-btn");
+const closeMenubtn = document.querySelector("#close-menu-btn");
+menuBtn.addEventListener("click",() => {
+header.classList.toggle("show-mobile-menu");
+});
+closeMenubtn.addEventListener("click",() => {
+menuBtn.click();
+});
+</script>
+</body>
+</html>

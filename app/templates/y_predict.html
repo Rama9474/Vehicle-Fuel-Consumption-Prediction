@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuel predictor</title>
+<link rel="stylesheet" href="../static/ypred_style.css">
+</head>
+<body>
+<div class="container">
+<header>
+<nav class="navbar">
+<a href="{{url_for('home')}}" class="logo">Predict here<span></span></a>
+<ul class="menu-links">
+<span id="close-menu-btn"class="material-symbols-outlined">
+close</span>
+<li><a href="{{url_for('home')}}">Home</a></li>
+<li><a href="{{url_for('y_predict')}}">Fuel predictor</a></li>
+<li><a href="{{url_for('about')}}">About us</a></li>
+<li><a href="{{url_for('contact')}}">Contact</a></li>
+</ul>
+<span id="menu-btn"class="material-symbols-outlined">menu</span>
+</nav>
+</header>
+<div class="super">
+<div class="main">
+<div class="sub">
+<h1>Fuel Consumption Predictor</h1>
+<form action = "{{ url_for('predict')}}" method = "POST">
+<div class="input-group">
+<div class="input-field">
+<input type = "number" name="dist" min="1" placeholder = "distance(
+km) "required>
+</div>
+<div class="input-field">
+<input type = "number" name="speed" min="1" placeholder =
+"speed(km/h)" required>
+</div>
+<div class="input-field">
+<input type = "number " name="ti" min="1" placeholder = "temparature_
+inside(C)" required>
+</div>
+<div class="input-field">
+<input type = "number" name="to"min="1" placeholder = "temparature_
+outside(C)" required>
+</div>
+<div class="input-field">
+<input type = "number" name="ac" min="0" placeholder = "Ac" required>
+</div>
+<div class="input-field">
+<input type = "number" name="rain" min="0" placeholder = "rain" required>
+</div>
+<div class="input-field">
+<input type = "number" name="sun" min="0" placeholder = "sun" required>
+</div>
+</div>
+<div class="btn-field">
+<button type="submit">Submit</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

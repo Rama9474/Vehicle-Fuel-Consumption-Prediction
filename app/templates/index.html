@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuel Predictor Website</title>
+<link rel="stylesheet" href="../static/style_index.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+
+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+<body>
+<header>
+<nav class="navbar">
+<a href="{{url_for('home')}}" class="logo">Home<span></span></a>
+<ul class="menu-links">
+<span id="close-menu-btn"class="material-symbols-outlined">close</span>
+<li><a href="{{url_for('home')}}">Home</a></li>
+<li><a href="{{url_for('y_predict')}}">Fuel predictor</a></li>
+<li><a href="{{url_for('about')}}">About us</a></li>
+<li><a href="{{url_for('contact')}}">Contact</a></li>
+</ul>
+<span id="menu-btn"class="material-symbols-outlined">menu</span>
+</nav>
+</header>
+<section class="hero-section">
+<div class="content">
+<h1>Know your vechile's fuel consumption for a trip</h1>
+<p>
+For different kinds of high fleet vechiles the fuel consumption is different based
+on trip you take
+</p>
+<button><a href="{{url_for('y_predict')}}">Predict Now</button>
+</div>
+</section>
+</body></html>

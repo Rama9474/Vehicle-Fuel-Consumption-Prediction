@@ -1,0 +1,192 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('fuel.jpg') no-repeat center center fixed; /* Add your image path */
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0, 0, 0, 0.7); /* Dark background for navbar */
+    z-index: 10;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 1.8em;
+    text-decoration: none;
+}
+
+.navbar .menu-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar .menu-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.navbar .menu-links li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 100px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+/* Heading */
+.heading h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Hero Content Section */
+.hero-content {
+    margin-top: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.button {
+    background: #4a90e2;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #357abd;
+}
+
+/* Hero Image */
+.hero-img {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.hero-img img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Our Team Section */
+.our-team {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.our-team h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.our-team p {
+    font-size: 1.1em;
+    margin-bottom: 50px;
+}
+
+/* Team Members List */
+.team {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-mem {
+    list-style: none;
+    padding: 0;
+}
+
+.team-mem li {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-mem li b {
+    font-size: 1.3em;
+    color: #4a90e2;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.team-mem li p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .navbar .menu-links {
+        display: none;
+    }
+
+    .navbar .menu-links.show-mobile-menu {
+        display: flex;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.8);
+        flex-direction: column;
+        padding: 10px 20px;
+        gap: 15px;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

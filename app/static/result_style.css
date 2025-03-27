@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('result.jpg'); /* Path to your image file */
+    background-size: cover; /* Cover the entire body area with the image */
+    background-repeat: no-repeat; /* Prevent repeating of the image */
+    color:white; 
+ }
+ 
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    padding: 15px 30px; /* Padding for navbar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+    list-style-type: none; /* Remove bullet points */
+}
+
+.menu-links li a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Padding around links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.menu-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+}
+
+/* Form Box Styles */
+.form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Full height minus navbar height */
+}
+
+.result {
+    background-color: white; /* White background for result box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+    padding: 30px; /* Padding inside the box */
+    text-align: center; /* Center align text */
+}
+
+.result h2 {
+    font-size: 2em; /* Large font size for results */
+    color: #4a90e2; /* Primary color for headings */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items on smaller screens */
+        align-items: flex-start; /* Align items to start */
+        padding: 10px; /* Reduced padding for mobile view */
+    }
+
+    .menu-links {
+        flex-direction: column; /* Stack links vertically on mobile */
+        gap: 10px; /* Smaller gap between links */
+        width: 100%; /* Full width for links container */
+        margin-top: 10px; /* Space above links in mobile view */
+    }
+
+    .result h2 {
+        font-size: 1.5em; /* Smaller font size on mobile devices */
+        padding-left: 10px; 
+        padding-right: 10px; 
+    }
+}
